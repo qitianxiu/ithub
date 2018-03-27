@@ -10,17 +10,18 @@ router
     //用户路由
 router    
     .get('/signin', user.showSignin)
-    .post('./signin', user.signin)
+    .post('/signin', user.signin)
     .get('/signup', user.showSignup)
-    .post('./signup', user.signup)
-    .post('./signout', user.signout)
+    .post('/signup', user.signup)
+    .post('/signout', user.signout)
     // 话题路由
 router
-    .get('/signin', user.showSignin)
-    .post('./signin', user.signin)
-    .get('/signup', user.showSignup)
-    .post('./signup', user.signup)
-    .post('./signout', user.signout)
+    .get('/topic/create', topic.showCreate)
+    .post('/topic/create', topic.create)
+    .get('/topic/:topicID', topic.show)
+    .get('/topic/:topicID/edit', topic.showEdit)
+    .post('/topic/:topicID/edit', topic.edit)
+    .post('/topic/:topicID/delete',topic.delete)
 
 
 
